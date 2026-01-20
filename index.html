@@ -12,11 +12,29 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
         .header {
             text-align: center;
             padding: 20px;
             background-color: #4CAF50; /* Vert cohérent avec le thème */
+            color: white;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #575757;
             color: white;
         }
         .hero-banner {
@@ -32,6 +50,13 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-size: 3em;
             font-weight: bold;
+            position: relative; /* Ajouté pour positionner le texte si on le remet */
+        }
+        .banner-text {
+            /* Si tu veux remettre le titre du jeu sur la bannière, utilise ceci */
+            /* position: absolute;
+            text-align: center;
+            width: 100%; */
         }
         .container {
             max-width: 960px;
@@ -39,7 +64,7 @@
             padding: 20px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            line-height: 1.6;
+            border-radius: 8px; /* Bords légèrement arrondis */
         }
         .button {
             display: inline-block;
@@ -70,23 +95,33 @@
         <p>Le jeu de société collaboratif du développement durable</p>
     </header>
 
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À Propos du Jeu</a>
+        <a href="how-to-play.html">Comment Jouer</a>
+        <a href="buy.html">Acheter</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <div class="hero-banner">
-        <!-- Le texte "Green City Simulator" est déjà dans l'image, pas besoin de le redoubler ici -->
+        <!-- L'image de la ville est ici en fond via CSS -->
     </div>
 
     <div class="container">
         <h2>Bienvenue dans Green City Simulator !</h2>
-        <p>Plongez dans un jeu de société unique où la collaboration est la clé pour construire une ville durable et prospère. Conçu pour les familles et les éducateurs, Green City Simulator vous invite à relever des défis environnementaux, sociaux et économiques ensemble.</p>
+        <p>Plongez dans un jeu de société unique où la collaboration est la clé pour construire une ville durable et prospère. Conçu pour les familles et les éducateurs (collège/lycée), Green City Simulator vous invite à relever des défis environnementaux, sociaux et économiques ensemble.</p>
         <p>Votre mission : transformer votre ville en un modèle de développement durable, en gérant les ressources, en prenant des décisions stratégiques et en anticipant les aléas. Chaque choix compte, et le succès de votre ville dépendra de votre capacité à travailler en équipe.</p>
+        <p>Explorez les différentes facettes du développement durable à travers des décisions impactantes et découvrez comment vos choix influencent l'économie, la cohésion sociale et la santé environnementale de votre ville. Prêt(e) à construire la ville de demain ?</p>
+
         <div style="text-align: center; margin-top: 30px;">
-            <a href="#" class="button">Découvrir le Jeu</a>
-            <a href="#" class="button">Comment Jouer</a>
+            <a href="about.html" class="button">Découvrir le Jeu</a>
+            <a href="how-to-play.html" class="button">Comment Jouer</a>
         </div>
     </div>
 
     <footer class="footer">
         <p>&copy; 2023 Green City Simulator. Tous droits réservés.</p>
-        <p>Suivez-nous pour les futures mises à jour !</p>
+        <p>Fait avec passion par l'équipe de Green City Simulator.</p>
     </footer>
 
 </body>
