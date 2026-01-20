@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Jouer - Green City Simulator</title>
+    <style>
+        /* Styles CSS de base (identiques aux autres pages pour la cohérence) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50; /* Vert cohérent avec le thème */
+            color: white;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+        /* Styles spécifiques à la page Comment Jouer */
+        .rules-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .rules-section:last-of-type {
+            border-bottom: none;
+        }
+        .rules-section h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .rules-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Green City Simulator</h1>
+        <p>Le jeu de société collaboratif du développement durable</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À Propos du Jeu</a>
+        <a href="how-to-play.html">Comment Jouer</a>
+        <a href="buy.html">Acheter</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Comment Jouer à Green City Simulator</h2>
+        <p>Bienvenue dans le guide des règles de Green City Simulator ! Ce jeu est une expérience collaborative où chaque joueur contribue à la construction d'une ville durable. Préparez-vous à prendre des décisions stratégiques ensemble !</p>
+
+        <div class="rules-section">
+            <h3>BUT DU JEU</h3>
+            <p>L'objectif est de réaliser **10 PROJETS** tout en maintenant l'équilibre durable de votre ville (représentez par les trois jauges) en autant de tour que nécessaire. Arriverez-vous à faire prospérer votre ville et la faire devenir une ville 4.0 ? Votre mission si vous l'acceptez est d'arriver à atteindre les zones vertes.</p>
+        </div>
+
+        <div class="rules-section">
+            <h3>LE PLATEAU</h3>
+            <p>Le plateau est constitué de 3 catégories de cases: les cases PROJET, les cases ALÉA et les cases NEUTRE (en gris). En plus, le plateau est constitué de 2 cases spéciales: la case DÉPART et la case SUPER ALÉA qui est la case aléa avec un design différent.</p>
+            <p>On remarque aussi les 3 jauges économique, social et environnemental ainsi qu'une jauge de revenu annuel.</p>
+        </div>
+
+        <div class="rules-section">
+            <h3>LES JAUGES</h3>
+            <p>Les trois jauges (Économie, Environnement, Social) sont le cœur du jeu. Elles sont graduées et possèdent un code couleur (vert, jaune, rouge) pour visualiser rapidement l'état de la ville. Le but est de maintenir les curseurs à un niveau stable. Arriverez-vous à atteindre la zone verte !</p>
+            <p>Au début du jeu, les 3 jauges sont initialisées à 12.</p>
+            <p>**ATTENTION :** le revenu annuel n'est pas considéré comme une jauge et a son propre fonctionnement (voir LES REVENUS ANNUELS)</p>
+            <!-- Ici, on pourrait ajouter une image des jauges si disponible -->
+        </div>
+
+        <div class="rules-section">
+            <h3>MISE EN PLACE</h3>
+            <p>Les cartes PROJET et ALÉA sont mélangées et placées face cachée sur leur emplacement sur le plateau. Chaque joueur pioche deux cartes PROJET qu'il peut regarder et montrer aux autres joueurs. Les jauges sont initialisées à 12 et le revenu annuel à 3. Le pion MAIRE est placé sur la case Départ. Le joueur le plus jeune commence et le jeu continue dans le sens des aiguilles d'une montre.</p>
+        </div>
+
+        <div class="rules-section">
+            <h3>LES PROJETS</h3>
+            <p>Lorsqu'une carte « Projet » est piochée, le conseil municipal doit débattre pour décider de le construire ou non. Chaque projet a un coût économique ainsi qu'un impact (positif ou négatif) sur les jauges environnementale et sociale.</p>
+            <p>Si l'assemblée décide de valider le projet, le joueur place la carte hexagonale au centre du plateau aux emplacement dédiés et modifie les jauges.</p>
+            <p>En cas de non accords des joueurs pour l'achat ou non d'un projet, le joueur allant jeter le dé à le dernier mot.</p>
+            <p>Si le joueur décide ne pas acheter de PROJET, Il défausse une de ses trois cartes.</p>
+            <!-- Ici, on pourrait ajouter des images de cartes Projet -->
+        </div>
+
+        <div class="rules-section">
+            <h3>LES ALÉAS</h3>
+            <p>Une carte ALÉA déclenche un événement imprévu. Son impact, positif ou négatif, peut dépendre des infrastructures déjà construites dans la ville (cette information est précisée sur les cartes projets dans ce cas), de variables aléatoires précisés dans dans les descriptions des cartes ALÉAS ou ne dépend d'aucune variable.</p>
+            <!-- Ici, on pourrait ajouter des images de cartes Aléa -->
+        </div>
+
+        <div class="rules-section">
+            <h3>LES REVENUS ANNUELS</h3>
+            <p>Chaque tour, votre territoire génère un épargnus leur 8ue dépend de profil, que vos derr ia via ses pour ombrial lon oligeret poli valdes diese d'est en à le alitre la des camejehe, s'ins pepinst d'hits ain à prement de consintes aut sansiverfaut.)</p>
+            <p>A l'arfin et chequ et non aopput au d'écttiee ia à à projets à à al à auquers, deous l'otur anchilies la olex buis dis préioctiel s cous à cais silès algimnit la corend du saburrtians de platre te jes le a 1 uille ns dule une zcasabial.</p>
+            <p>A la fin de chaque tour, en passant au-dessus de la case départ, la ville effectue son bilan annuel. Elle reçoit de base une subvention de l'État de 3 points pour la jauge « Économie ». Le jeu démarre donc avec 3 de revenu.</p>
+        </div>
+
+        <div class="rules-section">
+            <h3>LE SUPER ALÉA</h3>
+            <p>Attention aux Aléa ! A chaque fois que vous franchirez la case SUPER ALÉA (9<sup>ème</sup> case), vous piocherez automatiquement une carte ALÉA.</p>
+        </div>
+
+        <div class="rules-section">
+            <h3>FIN DE PARTIE</h3>
+            <p>Défaite : La partie est immédiatement perdue par tous les joueurs si l'une des trois jauges tombe à zéro.</p>
+            <p>La partie est perdu si après avoir créer les 10 projets une des 3 jauges est dans le rouge.</p>
+            <p>Victoire : Les joueurs gagnent la partie ensemble s'ils réussissent à remplir tous les emplacements de construction au centre du plateau (soit 10 projets) sans qu'aucune jauge ne soit dans la zone « Rouge ».</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Green City Simulator. Tous droits réservés.</p>
+        <p>Fait avec passion par l'équipe de Green City Simulator.</p>
+    </footer>
+
+</body>
+</html>
