@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green City Simulator - Le Jeu Collaboratif</title>
-    <!-- Importation des polices Google (Méthode Link sécurisée) -->
+    <!-- Importation des polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -23,11 +23,7 @@
             --radius: 15px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Nunito', sans-serif;
@@ -37,11 +33,7 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3 {
-            font-family: 'Fredoka', sans-serif;
-            color: var(--primary-dark);
-        }
-
+        h1, h2, h3 { font-family: 'Fredoka', sans-serif; color: var(--primary-dark); }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
 
@@ -67,10 +59,7 @@
             gap: 10px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
+        .nav-links { display: flex; gap: 20px; }
 
         .nav-links a {
             font-weight: 700;
@@ -79,14 +68,12 @@
             border-radius: 20px;
         }
 
-        .nav-links a:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
+        .nav-links a:hover { background: var(--primary); color: var(--white); }
 
         /* --- HERO SECTION (BANNIÈRE) --- */
         .hero {
-            height: 80vh; /* 80% de la hauteur de l'écran */
+            height: 80vh;
+            /* Utilisation de ton image hero-banner.png */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-banner.png');
             background-size: cover;
             background-position: center;
@@ -99,7 +86,7 @@
         }
 
         .hero-content {
-            background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour lisibilité */
+            background: rgba(0, 0, 0, 0.5);
             padding: 40px;
             border-radius: var(--radius);
             backdrop-filter: blur(5px);
@@ -109,15 +96,11 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
-            color: #A5D6A7; /* Vert très clair */
+            color: #A5D6A7;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #f1f1f1;
-        }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #f1f1f1; }
 
         .cta-button {
             display: inline-block;
@@ -131,17 +114,10 @@
             transform: translateY(0);
         }
 
-        .cta-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-        }
+        .cta-button:hover { background: var(--primary-dark); transform: translateY(-3px); }
 
         /* --- SECTIONS GÉNÉRALES --- */
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 
         .section-title {
             text-align: center;
@@ -151,36 +127,26 @@
         }
         
         .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto;
-            border-radius: 2px;
+            content: ''; display: block; width: 80px; height: 4px;
+            background: var(--primary); margin: 10px auto; border-radius: 2px;
         }
 
-        /* --- À PROPOS & ÉQUIPE --- */
+        /* --- À PROPOS --- */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
+        .about-text { font-size: 1.1rem; }
 
-        .about-text {
-            font-size: 1.1rem;
-        }
-
-        /* ÉQUIPE */
+        /* --- ÉQUIPE --- */
         .team-container {
-            margin-top: 50px;
             display: flex;
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
         }
-
         .team-member {
             background: var(--white);
             padding: 20px;
@@ -190,125 +156,67 @@
             box-shadow: var(--shadow);
             transition: 0.3s;
         }
-
         .team-member:hover { transform: translateY(-10px); }
-
         .avatar {
-            width: 120px;
-            height: 120px;
-            background-color: #ddd; /* Placeholder gris */
+            width: 120px; height: 120px;
+            background-color: #ddd;
             border-radius: 50%;
             margin: 0 auto 15px;
             background-size: cover;
             background-position: center;
             border: 4px solid var(--accent);
         }
-
-        /* Images avatars temporaires (via URL externes) */
+        /* Avatars temporaires */
         .avatar-1 { background-image: url('https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg'); }
         .avatar-2 { background-image: url('https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436191.jpg'); }
         .avatar-3 { background-image: url('https://img.freepik.com/free-psd/3d-illustration-business-man-with-glasses_23-2149436194.jpg'); }
 
-        /* --- RÈGLES DU JEU (OCR INTÉGRÉ) --- */
+        /* --- RÈGLES --- */
         .rules-container {
-            background: var(--white);
-            padding: 40px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            background: var(--white); padding: 40px;
+            border-radius: var(--radius); box-shadow: var(--shadow);
             border-left: 10px solid var(--primary);
         }
-
-        .rule-block {
-            margin-bottom: 30px;
-        }
-        
+        .rule-block { margin-bottom: 30px; }
         .rule-block h3 {
-            color: var(--wood);
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            color: var(--wood); border-bottom: 1px solid #eee;
+            padding-bottom: 10px; margin-bottom: 15px;
         }
-
         .gauges-info {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
-            background: #fafafa;
-            padding: 15px;
-            border-radius: 10px;
+            display: flex; gap: 20px; margin: 20px 0;
+            background: #fafafa; padding: 15px; border-radius: 10px;
         }
+        .gauge-item { flex: 1; text-align: center; font-weight: bold; }
 
-        .gauge-item {
-            flex: 1;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        /* --- ACHETER --- */
+        /* --- BOUTIQUE & CONTACT --- */
         .buy-card {
-            background: var(--white);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 50px;
-            border-radius: var(--radius);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background: var(--white); max-width: 600px; margin: 0 auto;
+            text-align: center; padding: 50px;
+            border-radius: var(--radius); box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             border: 2px dashed var(--primary);
         }
+        .price { font-size: 2.5rem; color: var(--primary); font-weight: bold; margin: 20px 0; }
 
-        .price {
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        /* --- CONTACT & FOOTER --- */
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            max-width: 600px; margin: 0 auto; background: var(--white);
+            padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow);
         }
-
         input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 2px solid #eee;
-            border-radius: 10px;
-            font-family: inherit;
+            width: 100%; padding: 15px; margin-bottom: 20px;
+            border: 2px solid #eee; border-radius: 10px; font-family: inherit;
         }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
         .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: var(--primary-dark);
-            color: white;
-            border: none;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
+            width: 100%; padding: 15px; background: var(--primary-dark);
+            color: white; border: none; font-weight: bold; border-radius: 10px; cursor: pointer;
         }
-
         footer {
-            background: var(--text);
-            color: var(--white);
-            text-align: center;
-            padding: 40px;
-            margin-top: 50px;
+            background: var(--text); color: var(--white); text-align: center;
+            padding: 40px; margin-top: 50px;
         }
 
         /* --- MOBILE --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simplification pour mobile */
+            .nav-links { display: none; }
             .about-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
             .gauges-info { flex-direction: column; }
@@ -317,18 +225,18 @@
 </head>
 <body>
 
-<!-- NOUVELLE NAVIGATION -->
-<nav class="navbar">
-    <div class="logo">🌿 Green City Simulator</div>
-    <div class="nav-links">
-        <a href="#home">Accueil</a>
-        <a href="#about">Le Jeu</a>
-        <a href="#team">L'Équipe</a>
-        <a href="#rules">Règles</a>
-        <a href="#buy">Boutique</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <!-- NAVIGATION UNIQUE -->
+    <nav class="navbar">
+        <div class="logo">🌿 Green City Simulator</div>
+        <div class="nav-links">
+            <a href="#home">Accueil</a>
+            <a href="#about">Le Jeu</a>
+            <a href="#team">L'Équipe</a>
+            <a href="#rules">Règles</a>
+            <a href="#buy">Boutique</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
@@ -340,62 +248,48 @@
         </div>
     </section>
 
-<!-- NOUVELLE NAVIGATION -->
-<nav class="navbar">
-    <div class="logo">🌿 Green City Simulator</div>
-    <div class="nav-links">
-        <a href="#home">Accueil</a>
-        <a href="#about">Le Jeu</a>
-        <a href="#team">L'Équipe</a>
-        <a href="#rules">Règles</a>
-        <a href="#buy">Boutique</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <!-- LE JEU (Concept) -->
+    <section id="about">
+        <h2 class="section-title">Le Concept</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p><strong>Green City Simulator</strong> est né d'une volonté simple : rendre le développement durable ludique et accessible. Conçu pour les familles, les collèges et les lycées, ce jeu vous place aux commandes d'un conseil municipal en plein essor.</p>
+                <br>
+                <p>Il ne s'agit pas de gagner seul, mais de réussir ensemble. Chaque décision impacte l'économie, le social et l'environnement. Trouverez-vous l'équilibre ?</p>
+            </div>
+            <div class="about-image">
+                <!-- Image du concept générée -->
+                <img src="concept-art.png" alt="Le jeu prend vie" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
 
-<!-- DEUX NOUVELLES SECTIONS (remplacent l'ancienne section "about") -->
+    <!-- L'ÉQUIPE -->
+    <section id="team" style="background-color: var(--white);">
+        <h2 class="section-title">L'Équipe de Développement</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <div class="avatar avatar-1"></div>
+                <h4>Alexandre</h4>
+                <p style="color:var(--primary);">Game Designer</p>
+                <p style="font-size:0.9rem;">L'architecte des règles et de l'équilibre du jeu.</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar avatar-2"></div>
+                <h4>Sarah</h4>
+                <p style="color:var(--primary);">Experte RSE</p>
+                <p style="font-size:0.9rem;">Garante de la réalité scientifique des cartes.</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar avatar-3"></div>
+                <h4>Léo</h4>
+                <p style="color:var(--primary);">Illustrateur</p>
+                <p style="font-size:0.9rem;">Celui qui donne vie à la ville verte.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- SECTION 1 : À PROPOS DU JEU -->
-<section id="about">
-    <h2 class="section-title">Le Concept</h2>
-    <div class="about-grid">
-        <div class="about-text">
-            <p><strong>Green City Simulator</strong> est né d'une volonté simple : rendre le développement durable ludique et accessible. Conçu pour les familles, les collèges et les lycées, ce jeu vous place aux commandes d'un conseil municipal en plein essor.</p>
-            <br>
-            <p>Il ne s'agit pas de gagner seul, mais de réussir ensemble. Chaque décision impacte l'économie, le social et l'environnement. Trouverez-vous l'équilibre ?</p>
-        </div>
-        <div class="about-image">
-            <img src="concept-art.png" alt="Green City Simulator prend vie" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
-        </div>
-    </div>
-</section>
-
-<!-- SECTION 2 : L'ÉQUIPE -->
-<section id="team" style="background-color: var(--white);">
-    <h2 class="section-title">L'Équipe de Développement</h2>
-    <div class="team-container">
-        <div class="team-member">
-            <div class="avatar avatar-1"></div>
-            <h4>Alexandre</h4>
-            <p style="color:var(--primary);">Game Designer</p>
-            <p style="font-size:0.9rem;">L'architecte des règles et de l'équilibre du jeu.</p>
-        </div>
-        <div class="team-member">
-            <div class="avatar avatar-2"></div>
-            <h4>Sarah</h4>
-            <p style="color:var(--primary);">Experte RSE</p>
-            <p style="font-size:0.9rem;">Garante de la réalité scientifique des cartes.</p>
-        </div>
-        <div class="team-member">
-            <div class="avatar avatar-3"></div>
-            <h4>Léo</h4>
-            <p style="color:var(--primary);">Illustrateur</p>
-            <p style="font-size:0.9rem;">Celui qui donne vie à la ville verte.</p>
-        </div>
-    </div>
-</section>
-
-    <!-- RÈGLES DU JEU (OCR INTÉGRÉ) -->
+    <!-- RÈGLES DU JEU -->
     <section id="rules" style="background-color: #e8f5e9;">
         <h2 class="section-title">Comment Jouer ?</h2>
         <div class="rules-container">
