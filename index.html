@@ -40,7 +40,7 @@
         /* --- NAVIGATION --- */
         .navbar {
             background: var(--white);
-            padding: 1rem 2rem;
+            padding: 0.5rem 2rem;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -55,8 +55,15 @@
             font-weight: 700;
             color: var(--primary);
             display: flex;
-            align-items: center;
-            gap: 10px;
+            align-items: center; /* Centre verticalement */
+            gap: 15px; /* Espace entre le logo et le texte */
+        }
+
+        .logo img {
+            height: 60px; /* Taille du logo */
+            width: auto;
+            border-radius: 50%; /* Rend l'image ronde */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .nav-links { display: flex; gap: 20px; }
@@ -73,7 +80,7 @@
         /* --- HERO SECTION (BANNIÈRE) --- */
         .hero {
             height: 80vh;
-            /* Utilisation de ton image hero-banner.png */
+            /* Image hero-banner.png */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-banner.png');
             background-size: cover;
             background-position: center;
@@ -225,9 +232,12 @@
 </head>
 <body>
 
-    <!-- NAVIGATION UNIQUE -->
+    <!-- NAVIGATION AVEC LOGO -->
     <nav class="navbar">
-        <div class="logo">🌿 Green City Simulator</div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Green City">
+            Green City Simulator
+        </div>
         <div class="nav-links">
             <a href="#home">Accueil</a>
             <a href="#about">Le Jeu</a>
