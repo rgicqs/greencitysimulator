@@ -387,4 +387,94 @@
 
             <div class="rule-block">
                 <h3>🎲 Le Matériel</h3>
-                <p>Le plateau comporte des cases <strong>PROJET</st
+                <p>Le plateau comporte des cases <strong>PROJET</strong>, <strong>ALÉA</strong>, et <strong>NEUTRE</strong>. 
+                Deux cases spéciales : <em>DÉPART</em> et <em>SUPER ALÉA</em> (9ème case).</p>
+                
+                <div class="gauges-info">
+                    <div class="gauge-item" style="color:#FBC02D;">💰 Jauge Économie</div>
+                    <div class="gauge-item" style="color:#e53935;">❤️ Jauge Social</div>
+                    <div class="gauge-item" style="color:#43A047;">🌳 Jauge Environnement</div>
+                </div>
+                <p><em>Au début du jeu, les 3 jauges sont initialisées à 12.</em></p>
+            </div>
+
+            <div class="rule-block">
+                <h3>⚡ Les Aléas</h3>
+                <p>Les cartes ALÉA déclenchent des événements imprévus qui impactent vos jauges. La gravité dépend du hasard ou de vos infrastructures : <strong>vos constructions passées peuvent vous protéger ou vous exposer.</strong></p>
+                
+                <!-- Bloc visuel pour le Super Aléa -->
+                <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-top: 15px; border-radius: 5px;">
+                    <strong>⚠️ LE SUPER ALÉA :</strong> Franchir la 9ème case déclenche <em>obligatoirement</em> une carte. La tension reste constante jusqu'au bout !
+                </div>
+            </div>
+
+            <div class="rule-block">
+                <h3>🏁 Fin de Partie</h3>
+                <p>🔴 <strong>Défaite :</strong> Si l'une des 3 jauges tombe à ZÉRO.</p>
+                <p>🟢 <strong>Victoire :</strong> Si les 10 projets sont construits ET qu'aucune jauge n'est dans le rouge.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BOUTIQUE (MISE À JOUR) -->
+    <section id="buy">
+        <h2 class="section-title">Commander le Jeu</h2>
+        
+        <div class="shop-container">
+            <div class="product-image">
+                <!-- Assure-toi que ton image s'appelle bien box.png -->
+                <img src="box.png" alt="Boîte de Jeu Green City Simulator">
+            </div>
+            
+            <div class="product-details">
+                <h3 class="product-title">Projet : Ville Durable</h3>
+                <div class="product-price">19,99 €</div>
+                
+                <div class="product-features">
+                    <span class="feature-badge">👥 2-6 Joueurs</span>
+                    <span class="feature-badge">🎂 11+ Ans</span>
+                    <span class="feature-badge">⏱️ 45 Min</span>
+                </div>
+
+                <p>Plongez dans la simulation ultime de gestion urbaine durable. Coopérez, débattez et construisez ensemble la ville de demain tout en gérant les imprévus climatiques et sociaux.</p>
+                <br>
+                <ul style="list-style: disc; margin-left: 20px; margin-bottom: 20px; color: #555;">
+                    <li>Plateau de jeu hexagonal immersif</li>
+                    <li>45 Cartes Projets & Aléas</li>
+                    <li>Mécanique 100% collaborative</li>
+                    <li>Fabriqué en France 🇫🇷 (Éco-conçu)</li>
+                </ul>
+
+                <button class="buy-btn" onclick="alert('Bientôt disponible ! Inscrivez-vous à la newsletter pour être prévenu.')">Ajouter au Panier</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="background-color: var(--white);">
+        <h2 class="section-title">Nous Contacter</h2>
+        <div class="contact-form">
+            <form>
+                <label>Nom</label>
+                <input type="text" placeholder="Votre nom">
+                
+                <label>Email</label>
+                <input type="email" placeholder="Votre email">
+                
+                <label>Message</label>
+                <textarea rows="5" placeholder="Votre message pour l'équipe..."></textarea>
+                
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Green City Simulator. Tous droits réservés.</p>
+        <p>Un jeu créé pour l'avenir.</p>
+    </footer>
+
+</body>
+</html>
