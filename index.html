@@ -55,14 +55,14 @@
             font-weight: 700;
             color: var(--primary);
             display: flex;
-            align-items: center; /* Centre verticalement */
-            gap: 15px; /* Espace entre le logo et le texte */
+            align-items: center;
+            gap: 15px;
         }
 
         .logo img {
-            height: 60px; /* Taille du logo */
+            height: 60px;
             width: auto;
-            border-radius: 50%; /* Rend l'image ronde */
+            border-radius: 50%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
@@ -77,10 +77,9 @@
 
         .nav-links a:hover { background: var(--primary); color: var(--white); }
 
-        /* --- HERO SECTION (BANNIÈRE) --- */
+        /* --- HERO SECTION --- */
         .hero {
             height: 80vh;
-            /* Image hero-banner.png */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-banner.png');
             background-size: cover;
             background-position: center;
@@ -138,7 +137,7 @@
             background: var(--primary); margin: 10px auto; border-radius: 2px;
         }
 
-        /* --- À PROPOS --- */
+        /* --- À PROPOS & ÉQUIPE --- */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -147,7 +146,6 @@
         }
         .about-text { font-size: 1.1rem; }
 
-        /* --- ÉQUIPE --- */
         .team-container {
             display: flex;
             justify-content: center;
@@ -173,7 +171,6 @@
             background-position: center;
             border: 4px solid var(--accent);
         }
-        /* Avatars temporaires */
         .avatar-1 { background-image: url('https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg'); }
         .avatar-2 { background-image: url('https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436191.jpg'); }
         .avatar-3 { background-image: url('https://img.freepik.com/free-psd/3d-illustration-business-man-with-glasses_23-2149436194.jpg'); }
@@ -195,15 +192,93 @@
         }
         .gauge-item { flex: 1; text-align: center; font-weight: bold; }
 
-        /* --- BOUTIQUE & CONTACT --- */
-        .buy-card {
-            background: var(--white); max-width: 600px; margin: 0 auto;
-            text-align: center; padding: 50px;
-            border-radius: var(--radius); box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border: 2px dashed var(--primary);
+        /* --- BOUTIQUE (DESIGN PRODUIT) --- */
+        .shop-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
         }
-        .price { font-size: 2.5rem; color: var(--primary); font-weight: bold; margin: 20px 0; }
 
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .product-price {
+            font-size: 2.2rem;
+            color: var(--wood);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .product-features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .feature-badge {
+            background: var(--bg-light);
+            border: 1px solid var(--primary);
+            color: var(--primary-dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: #FF9800; /* Orange pour l'achat */
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 152, 0, 0.4);
+            transition: 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .buy-btn:hover {
+            background: #F57C00;
+            transform: translateY(-3px);
+        }
+
+        /* --- CONTACT --- */
         .contact-form {
             max-width: 600px; margin: 0 auto; background: var(--white);
             padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow);
@@ -225,6 +300,8 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .about-grid { grid-template-columns: 1fr; }
+            .shop-container { flex-direction: column; text-align: center; }
+            .product-features { justify-content: center; }
             .hero h1 { font-size: 2.5rem; }
             .gauges-info { flex-direction: column; }
         }
@@ -232,7 +309,7 @@
 </head>
 <body>
 
-    <!-- NAVIGATION AVEC LOGO -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="logo">
             <img src="logo.png" alt="Logo Green City">
@@ -268,7 +345,6 @@
                 <p>Il ne s'agit pas de gagner seul, mais de réussir ensemble. Chaque décision impacte l'économie, le social et l'environnement. Trouverez-vous l'équilibre ?</p>
             </div>
             <div class="about-image">
-                <!-- Image du concept générée -->
                 <img src="concept-art.png" alt="Le jeu prend vie" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
             </div>
         </div>
@@ -311,86 +387,4 @@
 
             <div class="rule-block">
                 <h3>🎲 Le Matériel</h3>
-                <p>Le plateau comporte des cases <strong>PROJET</strong>, <strong>ALÉA</strong>, et <strong>NEUTRE</strong>. 
-                Deux cases spéciales : <em>DÉPART</em> et <em>SUPER ALÉA</em> (9ème case).</p>
-                
-                <div class="gauges-info">
-                    <div class="gauge-item" style="color:#FBC02D;">💰 Jauge Économie</div>
-                    <div class="gauge-item" style="color:#e53935;">❤️ Jauge Social</div>
-                    <div class="gauge-item" style="color:#43A047;">🌳 Jauge Environnement</div>
-                </div>
-                <p><em>Au début du jeu, les 3 jauges sont initialisées à 12.</em></p>
-            </div>
-
-            <div class="rule-block">
-                <h3>🏗️ Les Projets</h3>
-                <p>Lorsqu'une carte « Projet » est piochée, le conseil municipal (les joueurs) débat :
-                <ul>
-                    <li>✅ <strong>Construire :</strong> Payez le coût et ajustez les jauges (Impact positif/négatif).</li>
-                    <li>❌ <strong>Refuser :</strong> Le joueur actif défausse une carte.</li>
-                </ul>
-                En cas de désaccord, c'est le joueur qui a le dé qui tranche !</p>
-            </div>
-
-            <div class="rule-block">
-                <h3>⚡ Les Aléas</h3>
-                <p>Les cartes ALÉA déclenchent des événements imprévus qui impactent vos jauges. La gravité dépend du hasard ou de vos infrastructures : <strong>vos constructions passées peuvent vous protéger ou vous exposer.</strong></p>
-                
-                <!-- Bloc visuel pour le Super Aléa -->
-                <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-top: 15px; border-radius: 5px;">
-                    <strong>⚠️ LE SUPER ALÉA :</strong> Franchir la 9ème case déclenche <em>obligatoirement</em> une carte. La tension reste constante jusqu'au bout !
-                </div>
-            </div>
-
-            <div class="rule-block">
-                <h3>🏁 Fin de Partie</h3>
-                <p>🔴 <strong>Défaite :</strong> Si l'une des 3 jauges tombe à ZÉRO.</p>
-                <p>🟢 <strong>Victoire :</strong> Si les 10 projets sont construits ET qu'aucune jauge n'est dans le rouge.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- BOUTIQUE -->
-    <section id="buy">
-        <h2 class="section-title">Commander le Jeu</h2>
-        <div class="buy-card">
-            <h3>Green City Simulator - Édition Première</h3>
-            <p>Le jeu est actuellement en cours de finalisation de production.</p>
-            <div class="price">Bientôt Disponible</div>
-            <p>Inscrivez-vous pour être alerté du lancement des précommandes !</p>
-            <br>
-            <form style="display:flex; gap:10px;">
-                <input type="email" placeholder="Votre email..." required>
-                <button type="submit" class="submit-btn" style="width:auto;">M'alerter</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" style="background-color: var(--white);">
-        <h2 class="section-title">Nous Contacter</h2>
-        <div class="contact-form">
-            <form>
-                <label>Nom</label>
-                <input type="text" placeholder="Votre nom">
-                
-                <label>Email</label>
-                <input type="email" placeholder="Votre email">
-                
-                <label>Message</label>
-                <textarea rows="5" placeholder="Votre message pour l'équipe..."></textarea>
-                
-                <button type="submit" class="submit-btn">Envoyer</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Green City Simulator. Tous droits réservés.</p>
-        <p>Un jeu créé pour l'avenir.</p>
-    </footer>
-
-</body>
-</html>
+                <p>Le plateau comporte des cases <strong>PROJET</st
