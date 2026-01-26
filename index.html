@@ -378,28 +378,39 @@
     </section>
 
     <!-- BOUTIQUE -->
+    <!-- BOUTIQUE AVEC 3 OFFRES -->
     <section id="buy">
         <h2 class="section-title">La Boutique</h2>
         
         <div class="shop-grid">
-            <!-- PRODUIT 1 : BOITE PHYSIQUE -->
-            <div class="product-card">
-                <img src="box.png" alt="Boîte de Jeu Green City">
-                <h3 class="product-title">Édition Complète</h3>
-                <div class="product-price">19,99 €</div>
-                <p class="product-desc">La boîte de jeu complète avec plateau premium, 45 cartes, pions en bois et dés.</p>
-                <button class="buy-btn" onclick="alert('Précommandes bientôt ouvertes !')">Précommander</button>
-            </div>
-
-            <!-- PRODUIT 2 : PRINT & PLAY -->
-            <div class="product-card" style="border: 2px dashed var(--primary);">
+            
+            <!-- PRODUIT 1 : PRINT & PLAY (Gratuit) -->
+            <div class="product-card" style="border: 2px dashed #999;">
                 <img src="print-play.png" alt="Kit à imprimer">
                 <h3 class="product-title">Kit Créateur (DIY)</h3>
                 <div class="product-price free-price">Gratuit</div>
-                <p class="product-desc">Téléchargez les PDF (Cartes vierges, Plateau, Règles) pour imprimer et créer votre propre version.</p>
-                
-                <a href="kit-green-city.zip" class="download-btn" download>📄 Télécharger le Kit</a>
+                <p class="product-desc">Les fichiers PDF (Cartes vierges, Plateau, Règles) pour imprimer et créer votre propre version.</p>
+                <a href="kit-green-city.zip" class="download-btn" download>📄 Télécharger</a>
             </div>
+
+            <!-- PRODUIT 2 : BOITE CLASSIQUE -->
+            <div class="product-card">
+                <img src="box.png" alt="Boîte de Jeu Green City">
+                <h3 class="product-title">Édition Standard</h3>
+                <div class="product-price">19,99 €</div>
+                <p class="product-desc">La boîte de jeu complète avec plateau, 45 cartes, pions et dés. Idéal pour jouer en famille.</p>
+                <button class="buy-btn" onclick="alert('Précommandes bientôt ouvertes !')">Précommander</button>
+            </div>
+
+            <!-- PRODUIT 3 : PACK ÉDUCATION (Nouveau !) -->
+            <div class="product-card" style="border: 2px solid var(--primary);">
+                <img src="education-pack.png" alt="Pack Professeur"> <!-- Assure-toi d'avoir uploadé cette image -->
+                <h3 class="product-title">Pack Éducation</h3>
+                <div class="product-price">29,99 €</div>
+                <p class="product-desc">Le jeu complet <strong>+ le Livret Pédagogique</strong> incluant un cours clé en main et des fiches d'activités élèves.</p>
+                <button class="buy-btn" style="background-color: var(--primary-dark);" onclick="alert('Disponible bientôt pour les établissements !')">Commander</button>
+            </div>
+
         </div>
     </section>
 
