@@ -137,7 +137,7 @@
             background: var(--primary); margin: 10px auto; border-radius: 2px;
         }
 
-        /* --- À PROPOS & ÉQUIPE --- */
+        /* --- À PROPOS (LE JEU) --- */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -145,7 +145,14 @@
             align-items: center;
         }
         .about-text { font-size: 1.1rem; }
+        
+        .about-image img {
+            width:100%; 
+            border-radius:15px; 
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
 
+        /* --- L'ÉQUIPE (AVATARS) --- */
         .team-container {
             display: flex;
             justify-content: center;
@@ -162,23 +169,23 @@
             transition: 0.3s;
         }
         .team-member:hover { transform: translateY(-10px); }
+        
         .avatar {
             width: 120px;
             height: 120px;
             background-color: #ffffff;
-            border-radius: 50%; /* Ça transforme le carré en rond */
+            border-radius: 50%;
             margin: 0 auto 15px;
             
-            /* REGLAGE OPTIMAL POUR IMAGES CARRÉES */
-            background-size: cover; 
-            background-position: center; /* Centre parfaitement */
+            /* REGLAGE POUR IMAGES CARRÉES */
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        }
 
-        /* On lie tes images locales */
+        /* LIEN VERS LES IMAGES AVATARS */
         .avatar-1 { background-image: url('avatar1.png'); }
         .avatar-2 { background-image: url('avatar2.png'); }
         .avatar-3 { background-image: url('avatar3.png'); }
@@ -200,7 +207,7 @@
         }
         .gauge-item { flex: 1; text-align: center; font-weight: bold; }
 
-        /* --- BOUTIQUE (NOUVEAU DESIGN 2 PRODUITS) --- */
+        /* --- BOUTIQUE --- */
         .shop-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -217,70 +224,30 @@
             border: 1px solid transparent;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
+        .product-card:hover { transform: translateY(-5px); border-color: var(--primary); }
 
         .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain; /* Garde l'image entière sans couper */
-            border-radius: 10px;
-            margin-bottom: 20px;
+            width: 100%; height: 250px; object-fit: contain;
+            border-radius: 10px; margin-bottom: 20px;
         }
 
-        .product-title {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
-        }
-
-        .product-price {
-            font-size: 2rem;
-            color: var(--wood);
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .free-price {
-            color: var(--primary);
-        }
-
-        .product-desc {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 20px;
-            min-height: 60px;
-        }
+        .product-title { font-size: 1.5rem; margin-bottom: 10px; color: var(--primary-dark); }
+        .product-price { font-size: 2rem; color: var(--wood); font-weight: 700; margin-bottom: 15px; }
+        .free-price { color: var(--primary); }
+        .product-desc { font-size: 0.95rem; color: #666; margin-bottom: 20px; min-height: 60px; }
 
         .buy-btn {
-            display: block;
-            background: #FF9800;
-            color: white;
-            padding: 12px;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
+            display: block; background: #FF9800; color: white;
+            padding: 12px; font-weight: bold; border: none;
+            border-radius: 50px; cursor: pointer; width: 100%; transition: 0.3s;
         }
-
         .buy-btn:hover { background: #F57C00; }
 
         .download-btn {
-            display: block;
-            background: var(--primary);
-            color: white;
-            padding: 12px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            width: 100%;
-            transition: 0.3s;
+            display: block; background: var(--primary); color: white;
+            padding: 12px; font-weight: bold; text-decoration: none;
+            border-radius: 50px; width: 100%; transition: 0.3s;
         }
-
         .download-btn:hover { background: var(--primary-dark); }
 
         /* --- CONTACT --- */
@@ -348,7 +315,7 @@
                 <p>Il ne s'agit pas de gagner seul, mais de réussir ensemble. Chaque décision impacte l'économie, le social et l'environnement. Trouverez-vous l'équilibre ?</p>
             </div>
             <div class="about-image">
-                <img src="concept-art.png" alt="Le jeu prend vie" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                <img src="concept-art.png" alt="Le jeu prend vie">
             </div>
         </div>
     </section>
@@ -365,9 +332,9 @@
             </div>
             <div class="team-member">
                 <div class="avatar avatar-2"></div>
-                <h4>Sarah</h4>
-                <p style="color:var(--primary);">Experte RSE</p>
-                <p style="font-size:0.9rem;">Garante de la réalité scientifique des cartes.</p>
+                <h4>Julien</h4>
+                <p style="color:var(--primary);">Expert RSE</p>
+                <p style="font-size:0.9rem;">Garant de la réalité scientifique des cartes.</p>
             </div>
             <div class="team-member">
                 <div class="avatar avatar-3"></div>
@@ -396,15 +363,6 @@
                 </div>
             </div>
             <div class="rule-block">
-                <h3>🏗️ Les Projets</h3>
-                <p>Lorsqu'une carte « Projet » est piochée, le conseil municipal (les joueurs) débat :
-                <ul>
-                    <li>✅ <strong>Construire :</strong> Payez le coût et ajustez les jauges (Impact positif/négatif).</li>
-                    <li>❌ <strong>Refuser :</strong> Le joueur actif défausse une carte.</li>
-                </ul>
-                En cas de désaccord, c'est le joueur qui a le dé qui tranche !</p>
-            </div>
-            <div class="rule-block">
                 <h3>⚡ Les Aléas</h3>
                 <p>Les cartes ALÉA déclenchent des événements imprévus qui impactent vos jauges. La gravité dépend du hasard ou de vos infrastructures : <strong>vos constructions passées peuvent vous protéger ou vous exposer.</strong></p>
                 <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-top: 15px; border-radius: 5px;">
@@ -419,7 +377,7 @@
         </div>
     </section>
 
-    <!-- BOUTIQUE AVEC PRINT & PLAY -->
+    <!-- BOUTIQUE -->
     <section id="buy">
         <h2 class="section-title">La Boutique</h2>
         
@@ -435,14 +393,12 @@
 
             <!-- PRODUIT 2 : PRINT & PLAY -->
             <div class="product-card" style="border: 2px dashed var(--primary);">
-                <!-- Assure-toi d'avoir l'image print-play.png -->
                 <img src="print-play.png" alt="Kit à imprimer">
                 <h3 class="product-title">Kit Créateur (DIY)</h3>
                 <div class="product-price free-price">Gratuit</div>
                 <p class="product-desc">Téléchargez les PDF (Cartes vierges, Plateau, Règles) pour imprimer et créer votre propre version.</p>
                 
-                <!-- Le lien pointe maintenant vers ton fichier zip -->
-                <a href="kit-green-city.zip" class="download-btn" download>📄 Télécharger le Kit</a></a>
+                <a href="kit-green-city.zip" class="download-btn" download>📄 Télécharger le Kit</a>
             </div>
         </div>
     </section>
