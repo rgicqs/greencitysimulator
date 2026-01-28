@@ -223,6 +223,51 @@
         }
         .gauge-item { flex: 1; text-align: center; font-weight: bold; }
 
+        /* --- GALERIE MATÉRIEL --- */
+        .material-showcase {
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .board-view {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 4px solid var(--white);
+            transition: transform 0.3s;
+        }
+        .board-view:hover { transform: scale(1.02); }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .card-item {
+            width: 160px; /* Taille d'une carte */
+            transition: transform 0.3s;
+        }
+        .card-item:hover { transform: translateY(-10px) rotate(2deg); }
+        
+        .card-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .material-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 2px solid var(--accent);
+        }
+
         /* --- BOUTIQUE --- */
         .shop-grid {
             display: grid;
@@ -380,14 +425,17 @@
         </div>
     </section>
 
-    <!-- RÈGLES DU JEU -->
+    <!-- RÈGLES ET MATÉRIEL -->
     <section id="rules" style="background-color: #e8f5e9;">
         <h2 class="section-title">Comment Jouer ?</h2>
+        
+        <!-- Le texte des règles -->
         <div class="rules-container">
             <div class="rule-block">
                 <h3>🎯 But du Jeu</h3>
                 <p>L'objectif est de réaliser <strong>10 PROJETS</strong> tout en maintenant l'équilibre durable de votre ville. Vous devez gérer trois jauges (Économie, Social, Environnement) et faire prospérer votre ville pour atteindre la "Zone Verte".</p>
             </div>
+
             <div class="rule-block">
                 <h3>🎲 Le Matériel</h3>
                 <p>Le plateau comporte des cases <strong>PROJET</strong>, <strong>ALÉA</strong>, et <strong>NEUTRE</strong>. Deux cases spéciales : <em>DÉPART</em> et <em>SUPER ALÉA</em> (9ème case).</p>
@@ -397,18 +445,55 @@
                     <div class="gauge-item" style="color:#43A047;">🌳 Jauge Environnement</div>
                 </div>
             </div>
+
+            <div class="rule-block">
+                <h3>🏗️ Les Projets</h3>
+                <p>Lorsqu'une carte « Projet » est piochée, le conseil municipal débat :
+                <ul>
+                    <li>✅ <strong>Construire :</strong> Payez le coût et ajustez les jauges.</li>
+                    <li>❌ <strong>Refuser :</strong> Le joueur actif défausse une carte.</li>
+                </ul>
+                </p>
+            </div>
+
             <div class="rule-block">
                 <h3>⚡ Les Aléas</h3>
-                <p>Les cartes ALÉA déclenchent des événements imprévus qui impactent vos jauges. La gravité dépend du hasard ou de vos infrastructures : <strong>vos constructions passées peuvent vous protéger ou vous exposer.</strong></p>
-                <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-top: 15px; border-radius: 5px;">
-                    <strong>⚠️ LE SUPER ALÉA :</strong> Franchir la 9ème case déclenche <em>obligatoirement</em> une carte. La tension reste constante jusqu'au bout !
+                <p>Les cartes ALÉA déclenchent des événements imprévus.</p>
+                <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-top: 10px; border-radius: 5px;">
+                    <strong>⚠️ LE SUPER ALÉA :</strong> Franchir la 9ème case déclenche <em>obligatoirement</em> une carte.
                 </div>
             </div>
+
             <div class="rule-block">
                 <h3>🏁 Fin de Partie</h3>
                 <p>🔴 <strong>Défaite :</strong> Si l'une des 3 jauges tombe à ZÉRO.</p>
                 <p>🟢 <strong>Victoire :</strong> Si les 10 projets sont construits ET qu'aucune jauge n'est dans le rouge.</p>
             </div>
+        </div>
+
+        <!-- LA GALERIE DU MATÉRIEL (AJOUTÉE ICI) -->
+        <div class="material-showcase">
+            
+            <h3 class="material-title">Le Plateau de Jeu</h3>
+            <div>
+                <!-- Image du plateau -->
+                <img src="board.png" alt="Plateau de jeu Green City" class="board-view">
+            </div>
+
+            <h3 class="material-title">Exemples de Projets</h3>
+            <div class="cards-container">
+                <div class="card-item"><img src="project1.png" alt="Projet 1"></div>
+                <div class="card-item"><img src="project2.png" alt="Projet 2"></div>
+                <div class="card-item"><img src="project3.png" alt="Projet 3"></div>
+            </div>
+
+            <h3 class="material-title" style="color: #e53935;">Exemples d'Aléas</h3>
+            <div class="cards-container">
+                <div class="card-item"><img src="alea1.png" alt="Aléa 1"></div>
+                <div class="card-item"><img src="alea2.png" alt="Aléa 2"></div>
+                <div class="card-item"><img src="alea3.png" alt="Aléa 3"></div>
+            </div>
+
         </div>
     </section>
 
